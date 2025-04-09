@@ -11,7 +11,7 @@ class Node {
       this.size = 0;
     }
   
-    // Додавання елемента в кінець списку
+    
     add(data) {
       const newNode = new Node(data);
       if (this.head === null) {
@@ -24,7 +24,7 @@ class Node {
         current.next = newNode;
       }
       this.size++;
-    }// Видалення елементів, кратних 3
+    }
     removeMultiplesOfThree() {
       while (this.head !== null && this.head.data % 3 === 0) {
         this.head = this.head.next;
@@ -42,7 +42,7 @@ class Node {
         }
         current = current.next;
       }
-    }  // Додавання 88 після пари рівних чисел
+    }  
     insertAfterEqualPairs() {
       let current = this.head;
       while (current !== null && current.next !== null) {
@@ -51,14 +51,14 @@ class Node {
           newNode.next = current.next.next;
           current.next.next = newNode;
           this.size++;
-          current = newNode.next; // Пересуваємось далі
+          current = newNode.next; 
         } else {
           current = current.next;
         }
       }
     }
   
-    // Виведення списку
+   
     printList() {
       let result = "";
       let current = this.head;
@@ -71,7 +71,7 @@ class Node {
   }
   function main() {
     const list = new LinkedList();
-    let inputData = [10, 15, 15, 3, 7, 6, 12, 20, 20, 4];
+    let inputData = [10, 15, 15, 3, 7, 6, 12, 20, 20, 88, 88, 4];
   
     inputData.forEach(i => list.add(i));
     console.log("Початковий список: ", list.printList());

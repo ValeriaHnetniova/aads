@@ -19,7 +19,7 @@ class Queue {
             console.log("Черга пуста. Неможливе обчислення");
             return 0;
         } else {
-            const firsttriangle = this.items [0];
+            const firsttriangle = this.dequeue();
             const c = Math.sqrt(Math.pow(firsttriangle.a, 2) + Math.pow(firsttriangle.b, 2));
             console.log(`Периметр трикутника напочатку черги: ${firsttriangle.a + firsttriangle.b + c}`);
         }
@@ -29,7 +29,7 @@ class Queue {
         if(this.isEmpty()) {
             console.log("Ця черга пуста");
         } else {
-            this.items.shift();
+            return this.items.shift();
         }
     }
 
