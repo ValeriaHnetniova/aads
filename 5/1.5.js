@@ -17,6 +17,7 @@ function f (n) {
             }
         }
         [arr[i], arr[arrmax]] = [arr[arrmax], arr[i]];
+        
     }
     console.log("Відсортований масив за спаданням:");
     console.log(arr);

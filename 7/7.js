@@ -15,7 +15,7 @@ function dijkstra(graph, startNode) {
 
   for (const node in graph) {
     distances[node] = Infinity;
-  }
+  } 
   distances[startNode] = 0;
 
   priorityQueue.push([startNode, 0]);
